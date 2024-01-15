@@ -5,8 +5,14 @@ export const validator = [
     body('password', 'Short password. Min 5 symbols').isLength({min: 5}),
 ];
 
+export const registerValidator = [
+    body('userName', 'Short name. Min 3 symbols').isLength({min: 3}),
+    body('login', 'Short login. Min 3 symbols').isLength({min: 3}),
+    body('password', 'Short password. Min 5 symbols').isLength({min: 5}),
+];
+
 export const addUser = [
     body('login', 'Short login. Min 3 symbols').isLength({min: 3}),
     body('password', 'Short password. Min 5 symbols').isLength({min: 5}),
-    body('user', 'Add name of user').isString(),
+    body('userName', 'Add name of user').isString(),
 ];
