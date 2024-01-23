@@ -33,6 +33,7 @@ export const register = async (req, res) => {
         const doc = new UserModel({
             userName: req.body.userName,
             login: req.body.login,
+            avatarURL: req.body.avatarURL,
             passwordHash,
         });
         const user = await doc.save();
